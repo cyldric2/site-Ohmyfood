@@ -1,0 +1,25 @@
+
+@mixin button-recherche{
+   font-family: $font-family1;
+   font-size: 16px;
+color: $grey-color;
+   font-weight: 500;
+}
+@mixin button-gardient{
+  
+ color: white;
+ font-family: roboto;
+ font-weight: 500;
+   font-size: 16px;
+   border-radius: 20px;
+  margin: 15px;
+  padding: 15px;
+border: none ;
+ background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+ box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+@mixin hover-button{
+   opacity: 0.80;
+   box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.1);
+
+}

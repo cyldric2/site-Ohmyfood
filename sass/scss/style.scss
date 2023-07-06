@@ -1,0 +1,218 @@
+
+@import"variable";
+@import"mixin";
+@import"function";
+@import"effet";
+@import"button";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap" rel="stylesheet");
+
+
+body{
+   margin: 0;
+}
+nav {
+    @include flex;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 2px;
+    box-shadow: 0 2px 0 0 lightgray;
+    img{
+        width: 162px;
+        height: 44px;
+    } 
+    .fleche{
+        width: 18px;
+        height:16px ;
+        position: absolute;
+        top: 23px;left: 23px;
+    }
+}
+.recherche{
+    @include flex; 
+    background-color:$grey2-color ;
+    height: 50px;
+    justify-content: flex-end;
+.recherche-input{
+    @include button-recherche;
+    background-color:$grey2-color ;
+    border: none;
+  width: 60%;
+  padding: 10px;
+}
+}
+
+h1{
+    @include text;
+    font-weight: bold;
+    font-size: 24px;
+    
+}
+.font-gris{
+   @include font-gris;
+}
+
+p{
+    @include text;
+    font-weight: lighter;
+    font-size: 18px;
+}
+.button-gardient{
+    @include button-gardient;
+}
+.button-gardient:hover{
+ @include hover-button
+ }
+.fonction{
+   @include flex;
+   margin: 25px 0px 25px 00px;
+   .chiffre{
+   @include chiffre;
+   }
+   .bull{
+    @include bull;
+    background: $background-color;
+   }
+   .font-violet{
+    background-color: rgba(245, 237, 255, 1);
+   }
+    p{
+    @include text; 
+    font-weight: 500;
+    margin: 15px;
+    }
+}
+.fonctionnement{
+    padding: 30px 0 50px 0 ;
+}
+.left{
+    text-align: left;
+}
+.restaurant{
+    @include font-gris;
+    @include card;
+}
+.card{
+    margin: 10px 0 10px 0;
+}
+.my-active-heart{
+    transition: all;
+    transition-duration: 1s;
+    opacity: 0;
+}
+  .my-active-heart:hover{
+   opacity: 1;
+   background-clip: text;
+   -webkit-background-clip: text;
+     color: transparent;
+   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+footer{
+    color: white;
+    background-color: black;
+    padding: 25px;
+    img{
+    filter: invert(100);
+    width:120px;
+    height:25px ;
+    margin:0 0 15px 0;
+    }
+    p{
+    text-align: left;
+    margin: 7px 7px 7px 0;
+    font-size: 16px;
+    font-weight: 500;
+    i{
+    padding-right:10px ;
+    }
+    } 
+}
+ /******page menu*****/
+ .image{
+    object-fit: cover; 
+    width: 100%;
+   height:275px ;
+   margin-bottom: -40px;
+   position: relative;
+   z-index: 1;
+}
+.font-menu{
+    @include font-gris;
+    border-radius:30px 30px 0 0;
+    position: relative;
+    z-index: 2;
+    .row{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    h2{
+        font-family: shrikhand;
+        font-size: 28px;
+        font-weight: 400;
+        font-style: italic;
+        margin: 0;
+    }
+    .palette i{
+        position: absolute;
+        right: 20px;top: 30px;
+        padding-right: 20px;
+        font-size: 28px;
+    } 
+    p{
+        text-align: left;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0;
+    }
+    .border-green{
+        border-bottom: solid $green-color 3px;
+        width: 40px;
+        margin-bottom: 10px;
+        padding:30px 0 10px 0;
+    }
+    .bull-plat{ 
+        @include bull-plat;
+    }
+
+    .bull-plat:hover{
+        @include menu-check-on;
+    }
+  
+}
+
+.flex{
+    @include flex;
+}
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    background-color:$green-color;
+    position: absolute;
+    z-index: 3;
+    opacity: 0;   
+  animation: loader 5s;
+  .progress {
+    &__bar {
+     border: 10px solid $green-color;
+     border-top: 10px solid $primaire-color;
+     border-bottom: 10px solid #FF79DA;
+     border-radius: 50%;
+     width: 100px;
+     height: 100px;
+     margin: auto;
+     position: absolute;
+     z-index: 4;
+    
+     top: 0;left: 0;right: 0;bottom: 0;
+    animation: progress-bar 1s linear infinite;
+    }
+    p{
+        font-weight: 900;
+    }
+}
+}

@@ -190,8 +190,10 @@ footer{
     justify-content: center;
     align-items: center;
     width:100%;
-    height:100%;
+    height:100vh;
     background-color:$green-color;
+    white-space: nowrap;
+    overflow: hidden;
     position: absolute;
     z-index: 3;
     opacity: 0;   
@@ -207,7 +209,6 @@ footer{
      margin: auto;
      position: absolute;
      z-index: 4;
-    
      top: 0;left: 0;right: 0;bottom: 0;
     animation: progress-bar 1s linear infinite;
     }
@@ -215,4 +216,16 @@ footer{
         font-weight: 900;
     }
 }
+}
+.plat-1{
+    @include cache-plat;
+    animation: plat 3s;
+}
+.plat-2{
+    @include cache-plat;
+    animation: plat 6s;
+}
+.plat-3{
+    @include cache-plat;
+    animation: plat 9s;
 }

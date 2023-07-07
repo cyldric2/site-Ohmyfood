@@ -105,7 +105,8 @@
 @mixin bull-plat{
    display:flex ;
    align-items: end;
-
+   position: relative;
+   z-index: 3;
     width: 95%;
     height:40px ;
     background: white;
@@ -181,4 +182,13 @@
       transition: 1s;
        translate: 0px;  
        }
+}
+@mixin cache-plat{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    background-color:$background-color;
+    opacity: 1;
+    position: relative;
+    z-index: 4;
 }

@@ -1,16 +1,12 @@
 @keyframes loader{
-    0% ,85%{
-       
-        opacity: 1;
-       
+    0% ,85%{   
+        opacity: 1;  
     }
-    100% {
-      
-        opacity: 0;
-      
+    100% {  
+        opacity: 0;  
+        flex: none;
     }
 }
-
 @keyframes progress-bar{
     0% {
        transform: rotate(0deg);

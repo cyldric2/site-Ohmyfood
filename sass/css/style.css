@@ -5,6 +5,7 @@
   }
   100% {
     opacity: 0;
+    flex: none;
   }
 }
 @keyframes progress-bar {
@@ -54,7 +55,7 @@ nav .fleche {
   align-items: center;
   background-color: #EAEAEA;
   height: 50px;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .recherche .recherche-input {
   font-family: "Roboto", sans-serif;
@@ -63,11 +64,13 @@ nav .fleche {
   font-weight: 500;
   background-color: #EAEAEA;
   border: none;
-  width: 60%;
+  text-align: center;
+  font-size: 16px;
+  width: 110px;
   padding: 10px;
 }
 
-h1 {
+h1, h2 {
   font-family: "Roboto", sans-serif;
   text-align: center;
   vertical-align: top;
@@ -131,7 +134,7 @@ p {
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
+  width: 335px;
   font-size: 18px;
   border-radius: 20px;
   margin: 0 20px 0 -25px;
@@ -205,11 +208,8 @@ p {
   background-color: white;
   border-radius: 0 0 20px 20px;
 }
-.restaurant i {
-  position: absolute;
-  right: 20px;
-  font-size: 25px;
-  margin: 20px;
+.restaurant .bloc-resto {
+  width: 200px;
 }
 .restaurant a {
   font-family: roboto;
@@ -227,7 +227,21 @@ p {
 }
 
 .card {
+  width: 335px;
+  height: 251px;
   margin: 10px 0 10px 0;
+}
+
+.my-heart {
+  position: relative;
+  left: 70px;
+  font-size: 25px;
+}
+
+.my-active-heart {
+  position: relative;
+  font-size: 25px;
+  margin: 20px;
 }
 
 .my-active-heart {
@@ -280,6 +294,7 @@ footer p i {
   flex-direction: column;
   background-color: #F6F6F6;
   padding: 30px 15px 50px 15px;
+  align-items: center;
   border-radius: 30px 30px 0 0;
   position: relative;
   z-index: 2;
@@ -297,12 +312,13 @@ footer p i {
   font-style: italic;
   margin: 0;
 }
-.font-menu .palette i {
-  position: absolute;
-  right: 20px;
-  top: 30px;
-  padding-right: 20px;
-  font-size: 28px;
+.font-menu .palette {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.font-menu .palette .my-active-heart {
+  left: 25px;
 }
 .font-menu p {
   text-align: left;
@@ -410,7 +426,10 @@ footer p i {
   position: absolute;
   z-index: 3;
   opacity: 0;
-  animation: loader 5s;
+  animation: loader 3s;
+}
+.loader .progress {
+  position: absolute;
 }
 .loader .progress__bar {
   border: 10px solid #99E2D0;
@@ -420,7 +439,6 @@ footer p i {
   width: 100px;
   height: 100px;
   margin: auto;
-  position: absolute;
   z-index: 4;
   top: 0;
   left: 0;
@@ -429,6 +447,7 @@ footer p i {
   animation: progress-bar 1s linear infinite;
 }
 .loader .progress p {
+  font-size: 24px;
   font-weight: 900;
 }
 
@@ -463,4 +482,38 @@ footer p i {
   position: relative;
   z-index: 4;
   animation: plat 9s;
+}
+
+/****** Media queries ***********/
+/* Medium devices (desktop) */
+@media (min-width: 769px) {
+  h1 {
+    font-size: 40px;
+  }
+  .row-desktop {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .card {
+    margin-right: 20px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  footer img {
+    margin: 0;
+  }
+  footer p {
+    margin-right: 20px;
+  }
+  .plat-1, .plat-2, .plat-3 {
+    width: 634px;
+  }
+  .font-menu {
+    width: 1055px;
+    margin: auto;
+  }
 }/*# sourceMappingURL=style.css.map */

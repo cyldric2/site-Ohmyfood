@@ -5,7 +5,6 @@
   }
   100% {
     opacity: 0;
-    flex: none;
   }
 }
 @keyframes progress-bar {
@@ -234,7 +233,7 @@ p {
 
 .my-heart {
   position: relative;
-  left: 70px;
+  left: 68px;
   font-size: 25px;
 }
 
@@ -269,13 +268,16 @@ footer img {
   height: 25px;
   margin: 0 0 15px 0;
 }
-footer p {
+footer p, footer a {
+  font-family: roboto;
   text-align: left;
   margin: 7px 7px 7px 0;
   font-size: 16px;
   font-weight: 500;
+  color: white;
+  text-decoration: none;
 }
-footer p i {
+footer p i, footer a i {
   padding-right: 10px;
 }
 
@@ -424,7 +426,7 @@ footer p i {
   white-space: nowrap;
   overflow: hidden;
   position: absolute;
-  z-index: 3;
+  z-index: 1000;
   opacity: 0;
   animation: loader 3s;
 }
@@ -506,7 +508,7 @@ footer p i {
   footer img {
     margin: 0;
   }
-  footer p {
+  footer p, footer a {
     margin-right: 20px;
   }
   .plat-1, .plat-2, .plat-3 {

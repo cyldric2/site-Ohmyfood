@@ -100,7 +100,7 @@ p{
 }
 .my-heart{
     position: relative;
-    left: 70px;
+    left: 68px;
   font-size: 25px;
 }
 .my-active-heart{
@@ -131,11 +131,14 @@ footer{
     height:25px ;
     margin:0 0 15px 0;
     }
-    p{
+    p ,a{
+    font-family: roboto;    
     text-align: left;
     margin: 7px 7px 7px 0;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 500; 
+    color: white;
+    text-decoration: none;
     i{
     padding-right:10px ;
     }
@@ -212,7 +215,8 @@ footer{
     white-space: nowrap;
     overflow: hidden;
     position: absolute;
-    z-index: 3;
+    z-index: 1000
+    ;
     opacity: 0;   
   animation: loader 3s;
   .progress { 
@@ -268,7 +272,7 @@ footer{
     img{
         margin: 0;
     }
-    p{
+    p,a{
         margin-right: 20px;
     }
 }

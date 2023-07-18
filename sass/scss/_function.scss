@@ -1,10 +1,13 @@
 @keyframes loader{
+    0%{
+        z-index: 1000;
+    }
+    
     0% ,85%{   
         opacity: 1;  
     }
     100% {  
         opacity: 0;  
-       
     }
 }
 @keyframes progress-bar{

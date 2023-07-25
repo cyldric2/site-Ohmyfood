@@ -4,7 +4,7 @@
 @import"function";
 @import"effet";
 @import"button";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap" rel="stylesheet");
+
 
 
 body{ 
@@ -94,7 +94,9 @@ p{
 .restaurant{
     @include font-gris;
     @include card;
+    
 }
+
 .card{
     width: 335px;
     height: 251px;
@@ -154,6 +156,13 @@ footer{
    margin-bottom: -40px;
    position: relative;
    z-index: 1;
+}
+.row-desktop{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
 }
 .font-menu{
     @include font-gris;
@@ -259,9 +268,7 @@ footer{
         font-size: 40px;
     }
 .row-desktop{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    justify-content: left;
 }
 .card{
    margin-right: 20px;
